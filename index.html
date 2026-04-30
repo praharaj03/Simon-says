@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon says</title>
+    <title>Simon Says</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simon says Game</h1>
-    <h2>Press any key to start</h2>
-    
-    <div class="btn-container">
-        <div class="line-one">
-            <div class="btn red" type="button" id="red">1</div>
-            <div class="btn blue"type="button" id="blue">2</div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <h1>SIMON <span>SAYS</span></h1>
+    </header>
+
+    <div class="status-bar">
+        <div class="score-box">
+            <span class="label">LEVEL</span>
+            <span id="level-display">0</span>
         </div>
-            
-        <div class="line-two">
-            <div class="btn green" type="button" id="green">3</div>
-            <div class="btn yellow" type="button" id="yellow">4</div>   
+        <div id="message">Press any key to start</div>
+        <div class="score-box">
+            <span class="label">BEST</span>
+            <span id="best-display">0</span>
         </div>
     </div>
+
+    <div class="game-wrapper">
+        <div class="btn-container">
+            <div class="btn red"   id="red"></div>
+            <div class="btn blue"  id="blue"></div>
+            <div class="btn green" id="green"></div>
+            <div class="btn yellow"id="yellow"></div>
+        </div>
+        <div class="center-logo">
+            <div class="logo-ring"></div>
+            <span>S</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <span class="heart">♥</span> at <strong>Apna College</strong></p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
